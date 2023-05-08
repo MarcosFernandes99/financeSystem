@@ -1,0 +1,41 @@
+.containerInput {
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 5px;
+    
+    div label{
+        margin-right: 1vw;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    div input {
+        height: 4vh;
+        width: 40vw;
+        border-radius: 10px;
+    }
+
+    .Categoria select[name=Categoria]{
+        height: 4vh;
+        width: 40vw;
+        border-radius: 10px;
+
+        option[value=Entrada]{
+            background-color: greenyellow;
+        }
+        option[value=Saída]{
+            background-color: red;
+        }
+    }
+
+    button {
+        margin: 0 auto;
+    }
+
+}

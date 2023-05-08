@@ -1,9 +1,9 @@
-import { InfoArea } from "./components/infoArea/InfoArea"
+import { Home } from "./pages/Home"
 
 function App() {
 
   return (
-      <InfoArea/>
+    <Home/>
   )
 }
 
