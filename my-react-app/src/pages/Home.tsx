@@ -3,6 +3,7 @@ import { InputArea } from '../components/inputArea/InputArea'
 import { Details } from '../components/details/Details'
 import { useState } from 'react';
 import { DadosType } from '../types/dados.interface';
+import { InfoArea } from '../components/infoArea/InfoArea';
 
 export const Home = () => {
 
@@ -15,8 +16,8 @@ export const Home = () => {
 
   return (
     <>
-
       <div>
+        <InfoArea dados={dataList}/>
         <InputArea onAdd={handleAddData} />
         <Details dados={dataList} />
       </div>

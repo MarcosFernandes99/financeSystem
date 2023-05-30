@@ -25,6 +25,8 @@ export const InputArea = ({ onAdd }: { onAdd: (data: DadosType) => void }) => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         onAdd(inputValues);
+
+        
         setInputValues({
             data: "",
             categoria: "",

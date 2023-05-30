@@ -5,7 +5,8 @@ export interface DadosType {
     valor: number
 }
 
-export interface MeuContextType {
-    dados: DadosType
-    setDados: React.Dispatch<React.SetStateAction<DadosType>>
+export interface Balance{
+    entrada: number
+    saida: number
+    saldo: number
 }

@@ -1,4 +1,5 @@
 import { DadosType } from "../../types/dados.interface";
+import "./style.scss"
 
 interface DetailsProps {
     dados: DadosType[];
@@ -6,19 +7,25 @@ interface DetailsProps {
 
 export const Details = ({ dados }: DetailsProps) => {
     return (
-        <section>
-            <div>
-                <ul>
+        <section className="container">            
+                <ul className="subContainer">
                     {dados.map((item, index) => (
-                        <li key={index}>
-                            <p>Data: {item.data}</p>
-                            <p>Categoria: {item.categoria}</p>
-                            <p>Título: {item.titulo}</p>
-                            <p>Valor: {item.valor}</p>
+                        <li className="card" key={index}>
+                            <div className="navBar">
+                                <span>Data:</span>
+                                <span>Categoria:</span>
+                                <span>Título:</span>
+                                <span>Valor:</span>
+                            </div>
+                            <div className="dados">
+                                <span>{item.data}</span>
+                                <span>{item.categoria}</span>
+                                <span>{item.titulo}</span>
+                                <span>{item.valor}</span>
+                            </div>
                         </li>
                     ))}
                 </ul>
-            </div>
         </section>
     );
 };
