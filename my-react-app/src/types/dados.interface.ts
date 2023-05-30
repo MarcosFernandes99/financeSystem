@@ -1,4 +1,4 @@
-export interface DadosType {
+export interface DadosType {    
     data: string
     categoria: string
     titulo: string

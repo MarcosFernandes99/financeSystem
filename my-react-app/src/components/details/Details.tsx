@@ -1,20 +1,24 @@
-import React, { useContext } from 'react'
-import { MeuContext } from '../../context/MeuContext';
+import { DadosType } from "../../types/dados.interface";
 
-export const Details = () => {
+interface DetailsProps {
+    dados: DadosType[];
+  }
 
-    const { dados } = useContext(MeuContext);
-    
+export const Details = ({ dados }: DetailsProps) => {
     return (
         <section>
             <div>
-                AAAAAAAAAAAA
-                {dados.data && <p>Data: {dados.data}</p>}
-                {dados.categoria && <p>Categoria: {dados.categoria}</p>}
-                {dados.titulo && <p>Título: {dados.titulo}</p>}
-                {dados.valor && <p>Valor: {dados.valor}</p>}
+                <ul>
+                    {dados.map((item, index) => (
+                        <li key={index}>
+                            <p>Data: {item.data}</p>
+                            <p>Categoria: {item.categoria}</p>
+                            <p>Título: {item.titulo}</p>
+                            <p>Valor: {item.valor}</p>
+                        </li>
+                    ))}
+                </ul>
             </div>
-
         </section>
-    )
-}
+    );
+};
